@@ -1,0 +1,38 @@
+{
+    "actionMenu-items": {
+      "title": "submit workflow"
+    },
+    "center": {
+      "title": "no workflows"
+    },
+    "tips": {
+      "tip1": "To create a new workflow, use the button above",
+      "tip2": "in the examples",
+      "tip3": "or",
+      "tip4": "Workflow Template Catalog",
+      "tip5": ".",
+      "tip6": "You can find manifests",
+      "tip7": "你可以在",
+      "tip8": "你可以在",
+      "tip9": "你可以在"
+    },
+    "left": {
+      "left1": "NAMESPACES",
+      "left2": "LABELS",
+      "left3": "WORKFLOW TEMPLATE",
+      "left4": "CRON WORKFLOW",
+      "left5": "Phases",
+      "left6": ".",
+      "left7": "."
+    },
+    "submit":{
+      "s1": "Submit a new workflow",
+      "s2": "Select a workflow template",
+      "s3": "or",
+      "s4": "Edit with full workflow options",
+      "s5": "Either:"
+
+    }
+}
+  
+  
