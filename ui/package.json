@@ -7,7 +7,7 @@
     ],
     "scripts": {
         "build": "rm -Rf dist && NODE_ENV=production webpack -p --config ./src/app/webpack.config.js",
-        "start": "webpack-dev-server --config ./src/app/webpack.config.js",
+        "start": "webpack-dev-server --config ./src/app/webpack.config.js --host 0.0.0.0",
         "lint": "tslint --fix -p ./src/app",
         "test": "jest"
     },
