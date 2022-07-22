@@ -24,7 +24,7 @@ var scheduledWf = `
     creationTimestamp: "2020-02-28T18:31:32Z"
     generation: 69
     name: hello-world
-    namespace: argo
+    namespace: workflow
     resourceVersion: "53389"
     selfLink: /apis/argoproj.io/v1alpha1/namespaces/argo/cronworkflows/hello-world
     uid: f230ee83-2ddc-435e-b27c-f0ca63293100
@@ -340,7 +340,7 @@ metadata:
   creationTimestamp: "2022-02-04T05:33:24Z"
   generation: 2
   name: hello-world
-  namespace: argo
+  namespace: workflow
   resourceVersion: "341102"
   uid: 9ac888d8-95e3-4f93-8983-0d46c6c7d62a
 spec:
@@ -372,7 +372,7 @@ status:
   - apiVersion: argoproj.io/v1alpha1
     kind: Workflow
     name: hello-world-1643952840
-    namespace: argo
+    namespace: workflow
     resourceVersion: "341101"
     uid: c56a8f98-ff46-4815-9d6f-d9db5cfcd941
   lastScheduledTime: "2022-02-04T05:34:00Z"

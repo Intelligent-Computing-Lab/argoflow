@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: ui-workflow-error
-  namespace: argo
+  namespace: workflow
 spec:
   entrypoint: main
   templates:

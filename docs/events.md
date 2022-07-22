@@ -49,7 +49,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
   name: my-wf-tmple
-  namespace: argo
+  namespace: workflow
 spec:
   templates:
     - name: main

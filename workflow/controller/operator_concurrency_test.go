@@ -551,7 +551,7 @@ status:
   artifactRepositoryRef:
     configMap: artifact-repositories
     key: default-v1
-    namespace: argo
+    namespace: workflow
   conditions:
   - status: "False"
     type: PodRunning

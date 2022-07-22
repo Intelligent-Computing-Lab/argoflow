@@ -144,7 +144,7 @@ metadata:
     workflows.argoproj.io/completed: "true"
     workflows.argoproj.io/phase: Succeeded
   name: many-items-z26lj
-  namespace: argo
+  namespace: workflow
   resourceVersion: "5102"
   selfLink: /apis/argoproj.io/v1alpha1/namespaces/argo/workflows/many-items-z26lj
   uid: d21f092a-f659-4300-bd69-983a9912a379

@@ -2683,7 +2683,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   generateName: sort-dag-tasks-test-
-  namespace: argo
+  namespace: workflow
 spec:
   entrypoint: main
   templates:
