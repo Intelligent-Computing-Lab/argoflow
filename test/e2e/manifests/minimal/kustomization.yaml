@@ -16,4 +16,4 @@ patchesStrategicMerge:
 
 commonLabels:
   app.kubernetes.io/part-of: argo
-namespace: workflow
+namespace: wf

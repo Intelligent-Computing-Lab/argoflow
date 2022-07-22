@@ -699,19 +699,19 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: argo
-  namespace: workflow
+  namespace: wf
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: argo-server
-  namespace: workflow
+  namespace: wf
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: argo-role
-  namespace: workflow
+  namespace: wf
 rules:
 - apiGroups:
   - coordination.k8s.io
@@ -992,7 +992,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: argo-binding
-  namespace: workflow
+  namespace: wf
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
@@ -1000,7 +1000,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: argo
-  namespace: workflow
+  namespace: wf
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -1013,7 +1013,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: argo
-  namespace: workflow
+  namespace: wf
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -1026,19 +1026,19 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: argo-server
-  namespace: workflow
+  namespace: wf
 ---
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: workflow-controller-configmap
-  namespace: workflow
+  namespace: wf
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: argo-server
-  namespace: workflow
+  namespace: wf
 spec:
   ports:
   - name: web
@@ -1053,7 +1053,7 @@ metadata:
   labels:
     app: workflow-controller
   name: workflow-controller-metrics
-  namespace: workflow
+  namespace: wf
 spec:
   ports:
   - name: metrics
@@ -1073,7 +1073,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: argo-server
-  namespace: workflow
+  namespace: wf
 spec:
   selector:
     matchLabels:
@@ -1122,7 +1122,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: workflow-controller
-  namespace: workflow
+  namespace: wf
 spec:
   selector:
     matchLabels:

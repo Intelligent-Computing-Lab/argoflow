@@ -25,7 +25,7 @@ DEV_IMAGE             ?= $(shell [ `uname -s` = Darwin ] && echo true || echo fa
 K3D_CLUSTER_NAME      ?= k3s-default
 
 # The name of the namespace where Kubernetes resources/RBAC will be installed
-KUBE_NAMESPACE        ?= workflow
+KUBE_NAMESPACE        ?= wf
 MANAGED_NAMESPACE     ?= $(KUBE_NAMESPACE)
 
 VERSION               := latest

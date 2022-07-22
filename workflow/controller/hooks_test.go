@@ -16,7 +16,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: lifecycle-hook-bgsf6
-  namespace: workflow
+  namespace: wf
   resourceVersion: "33638"
 spec:
   entrypoint: main
@@ -62,7 +62,7 @@ status:
           name: my-minio-cred
     configMap: artifact-repositories
     key: default-v1
-    namespace: workflow
+    namespace: wf
   conditions:
   - status: "False"
     type: PodRunning
@@ -152,7 +152,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: lifecycle-hook-tmpl-levelg8mqq
-  namespace: workflow
+  namespace: wf
 spec:
   entrypoint: main
   templates:
@@ -779,7 +779,7 @@ func TestWfTemplateRefWithHook(t *testing.T) {
 kind: Workflow
 metadata:
   name: lifecycle-hook-fh7t4
-  namespace: workflow
+  namespace: wf
 spec:
   workflowTemplateRef:
     name: lifecycle-hook

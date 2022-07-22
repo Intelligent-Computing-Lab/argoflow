@@ -939,7 +939,7 @@ metadata:
     workflows.argoproj.io/completed: "true"
     workflows.argoproj.io/phase: Failed
   name: retry-backoff-s69z6
-  namespace: workflow
+  namespace: wf
   resourceVersion: "348670"
   selfLink: /apis/argoproj.io/v1alpha1/namespaces/argo/workflows/retry-backoff-s69z6
   uid: 110dbef4-c54b-4963-9739-03e9878810d9
@@ -4304,7 +4304,7 @@ metadata:
   labels:
     workflows.argoproj.io/phase: Running
   name: echo-wngc4
-  namespace: workflow
+  namespace: wf
   resourceVersion: "6339"
   selfLink: /apis/argoproj.io/v1alpha1/namespaces/argo/workflows/echo-wngc4
   uid: bed2749b-2971-4172-a61e-455ef02c4379
@@ -5199,7 +5199,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: resubmit-pending-wf
-  namespace: workflow
+  namespace: wf
 spec:
   
   entrypoint: resubmit-pending
@@ -5502,7 +5502,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: steps-9fvnv
-  namespace: workflow
+  namespace: wf
 spec:
   activeDeadlineSeconds: 3
   entrypoint: main
@@ -6939,7 +6939,7 @@ kind: Workflow
 metadata:
   creationTimestamp: "2021-04-05T21:50:18Z"
   name: hello-world-4srt7
-  namespace: workflow
+  namespace: wf
 spec:
   entrypoint: whalesay
   podSpecPatch: |
@@ -6958,7 +6958,7 @@ status:
   artifactRepositoryRef:
     configMap: artifact-repositories
     key: default-v1
-    namespace: workflow
+    namespace: wf
   finishedAt: null
   nodes:
     hello-world-4srt7:
@@ -6996,7 +6996,7 @@ var wfPendingWithSync = `apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: hello-world-mpdht
-  namespace: workflow
+  namespace: wf
 spec:
   entrypoint: whalesay
   templates:
@@ -7509,7 +7509,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: exit-handler-with-param-xbh52
-  namespace: workflow
+  namespace: wf
 spec:
   arguments: {}
   entrypoint: main
@@ -7736,7 +7736,7 @@ func TestSetWFPodNamesAnnotation(t *testing.T) {
 var RetryLoopWithOutputParam = `
 metadata:
   name: hr-retry-replication
-  namespace: workflow
+  namespace: wf
   uid: a0edb47a-3e6d-4568-b828-bf0cfcd8e5d5
   resourceVersion: '258409'
   generation: 21
@@ -7747,7 +7747,7 @@ metadata:
     workflows.argoproj.io/phase: Succeeded
   annotations:
     meta.helm.sh/release-name: hr-retry-replication
-    meta.helm.sh/release-namespace: workflow
+    meta.helm.sh/release-namespace: wf
     workflows.argoproj.io/pod-name-format: v1
   managedFields:
     - manager: Go-http-client
@@ -8189,7 +8189,7 @@ metadata:
     workflows.argoproj.io/phase: Running
     workflows.argoproj.io/resubmitted-from-workflow: container-set-termination-demob7c6c
   name: container-set-termination-demopw5vv
-  namespace: workflow
+  namespace: wf
   resourceVersion: "88102"
   uid: 2a5a4c10-3a5c-4fb4-8931-20ac78cabfee
 spec:

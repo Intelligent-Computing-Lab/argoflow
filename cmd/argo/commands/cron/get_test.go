@@ -16,7 +16,7 @@ metadata:
   creationTimestamp: "2020-05-19T16:47:25Z"
   generation: 98
   name: wonderful-tiger
-  namespace: workflow
+  namespace: wf
   resourceVersion: "465179"
   selfLink: /apis/argoproj.io/v1alpha1/namespaces/argo/cronworkflows/wonderful-tiger
   uid: c4ea2e84-ec58-4638-bf1d-5d543e7cc86a

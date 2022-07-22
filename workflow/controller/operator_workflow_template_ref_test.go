@@ -113,7 +113,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   name: ui-workflow-error
-  namespace: workflow
+  namespace: wf
 spec:
   entrypoint: main
   workflowTemplateRef:

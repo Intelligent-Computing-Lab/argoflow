@@ -43,7 +43,7 @@ metadata:
     workflows.argoproj.io/phase: Running
     workflows.argoproj.io/resubmitted-from-workflow: container-set-termination-demob7c6c
   name: container-set-termination-demopw5vv
-  namespace: workflow
+  namespace: wf
   resourceVersion: "88102"
   uid: 2a5a4c10-3a5c-4fb4-8931-20ac78cabfee
 spec:

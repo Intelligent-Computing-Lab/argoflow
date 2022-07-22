@@ -19,7 +19,7 @@ clusters:
 contexts:
 - context:
     cluster: k3s-default
-    namespace: workflow
+    namespace: wf
     user: k3s-default
   name: k3s-default
 current-context: k3s-default
