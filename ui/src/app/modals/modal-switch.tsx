@@ -24,14 +24,14 @@ export const ModalSwitch = ({version, modals}: {version: string; modals: {[key: 
 
     const majorMinorVersion = majorMinor(version);
 
-    if (modals.firstTimeUser && !ftu) {
-        return <FirstTimeUserModal dismiss={() => setFtu('dismissed')} />;
-    }
+    // if (modals.firstTimeUser && !ftu) {
+    //     return <FirstTimeUserModal dismiss={() => setFtu('dismissed')} />;
+    // }
     if (modals.feedback && feedback < now) {
         return <FeedbackModal dismiss={() => setFeedback(whenToAskForFeedback)} />;
     }
-    if (modals.newVersion && lastVersion !== majorMinorVersion) {
-        return <NewVersionModal dismiss={() => setLastVersion(majorMinorVersion)} version={version} />;
-    }
+    // if (modals.newVersion && lastVersion !== majorMinorVersion) {
+    //     return <NewVersionModal dismiss={() => setLastVersion(majorMinorVersion)} version={version} />;
+    // }
     return <></>;
 };

@@ -14,7 +14,16 @@
       "tip6": "You can find manifests",
       "tip7": "你可以在",
       "tip8": "你可以在",
-      "tip9": "你可以在"
+      "tip9": "No workflow templates",
+      "tip10": "You can create new templates here or using the CLI",
+      "tip11": "No workflow templates",
+      "tip12": "No workflow templates",
+      "tip13": "No workflow templates",
+      "tip14": "No workflow templates",
+      "tip15": "无集群范围工作流",
+      "tip16": "无集群范围工作流",
+      "tip17": "无集群范围工作流",
+      "tip18": "无集群范围工作流"
     },
     "left": {
       "left1": "NAMESPACES",

@@ -192,6 +192,7 @@ export const AppRouter = ({popupManager, history, notificationsManager}: {popupM
                             </Switch>
                         </ErrorBoundary>
                         <ChatButton />
+                        {/*姜猛修改标记，中version来源*/}
                         {version && modals && <ModalSwitch version={version.version} modals={modals} />}
                     </Layout>
                 </Switch>

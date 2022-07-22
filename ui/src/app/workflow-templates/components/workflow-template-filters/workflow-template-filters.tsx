@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import * as models from '../../../../models';
 import {NamespaceFilter} from '../../../shared/components/namespace-filter';
 import {TagsInput} from '../../../shared/components/tags-input/tags-input';
+import { useTranslation,Trans } from 'react-i18next';
 
 require('./workflow-template-filters.scss');
 
@@ -15,7 +16,7 @@ interface WorkflowFilterProps {
 
 export const WorkflowTemplateFilters = ({templates, namespace, labels, onChange}: WorkflowFilterProps) => {
     const [labelSuggestion, setLabelSuggestion] = useState([]);
-
+    const { t, i18n } = useTranslation();
     useEffect(() => {
         const suggestions = new Array<string>();
         templates
@@ -36,7 +37,7 @@ export const WorkflowTemplateFilters = ({templates, namespace, labels, onChange}
         <div className='wf-filters-container'>
             <div className='row'>
                 <div className='columns small-2 xlarge-12'>
-                    <p className='wf-filters-container__title'>Namespace</p>
+                    <p className='wf-filters-container__title'>{t('left.left1')}</p>
                     <NamespaceFilter
                         value={namespace}
                         onChange={ns => {
@@ -45,7 +46,7 @@ export const WorkflowTemplateFilters = ({templates, namespace, labels, onChange}
                     />
                 </div>
                 <div className='columns small-2 xlarge-12'>
-                    <p className='wf-filters-container__title'>Labels</p>
+                    <p className='wf-filters-container__title'>{t('left.left2')}</p>
                     <TagsInput
                         placeholder=''
                         autocomplete={labelSuggestion}

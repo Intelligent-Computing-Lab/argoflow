@@ -21,12 +21,15 @@ import {useQueryParams} from '../../../shared/use-query-params';
 import {Utils} from '../../../shared/utils';
 import {WorkflowTemplateCreator} from '../workflow-template-creator';
 import {WorkflowTemplateFilters} from '../workflow-template-filters/workflow-template-filters';
+import { useTranslation,Trans } from 'react-i18next';
 
 require('./workflow-template-list.scss');
 
-const learnMore = <a href='https://argoproj.github.io/argo-workflows/workflow-templates/'>Learn more</a>;
+// const learnMore = <a href='https://argoproj.github.io/argo-workflows/workflow-templates/'>Learn more</a>;
+const learnMore = '';
 
 export const WorkflowTemplateList = ({match, location, history}: RouteComponentProps<any>) => {
+    const { t, i18n } = useTranslation();
     // boiler-plate
     const queryParams = new URLSearchParams(location.search);
     const {navigation} = useContext(Context);
@@ -90,7 +93,7 @@ export const WorkflowTemplateList = ({match, location, history}: RouteComponentP
                 actionMenu: {
                     items: [
                         {
-                            title: 'Create New Workflow Template',
+                            title: <p>{t('tips.tip11')}</p>,
                             iconClassName: 'fa fa-plus',
                             action: () => setSidePanel(true)
                         }
@@ -116,8 +119,8 @@ export const WorkflowTemplateList = ({match, location, history}: RouteComponentP
                     {!templates ? (
                         <Loading />
                     ) : templates.length === 0 ? (
-                        <ZeroState title='No workflow templates'>
-                            <p>You can create new templates here or using the CLI.</p>
+                        <ZeroState title={t('tips.tip9')}>
+                            <p>{t('submit.s1')}</p>
                             <p>
                                 <ExampleManifests />. {learnMore}.
                             </p>
@@ -127,9 +130,9 @@ export const WorkflowTemplateList = ({match, location, history}: RouteComponentP
                             <div className='argo-table-list'>
                                 <div className='row argo-table-list__head'>
                                     <div className='columns small-1' />
-                                    <div className='columns small-5'>NAME</div>
-                                    <div className='columns small-3'>NAMESPACE</div>
-                                    <div className='columns small-3'>CREATED</div>
+                                    <div className='columns small-5'>{t('tips.tip6')}</div>
+                                    <div className='columns small-3'>{t('tips.tip1')}</div>
+                                    <div className='columns small-3'>{t('tips.tip7')}</div>
                                 </div>
                                 {templates.map(t => (
                                     <Link
@@ -148,7 +151,7 @@ export const WorkflowTemplateList = ({match, location, history}: RouteComponentP
                                 ))}
                             </div>
                             <Footnote>
-                                <InfoIcon /> Workflow templates are reusable templates you can create new workflows from. <ExampleManifests />. {learnMore}.
+                                <InfoIcon /> {t('tips.tip12')}. <ExampleManifests />. {learnMore}.
                             </Footnote>
                             <PaginationPanel onChange={setPagination} pagination={pagination} numRecords={null} />
                         </>

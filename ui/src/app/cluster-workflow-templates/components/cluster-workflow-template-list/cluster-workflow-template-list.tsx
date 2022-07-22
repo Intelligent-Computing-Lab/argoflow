@@ -14,6 +14,8 @@ import {Consumer} from '../../../shared/context';
 import {Footnote} from '../../../shared/footnote';
 import {services} from '../../../shared/services';
 import {ClusterWorkflowTemplateCreator} from '../cluster-workflow-template-creator';
+import { useTranslation,Trans } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 require('./cluster-workflow-template-list.scss');
 
@@ -22,7 +24,8 @@ interface State {
     error?: Error;
 }
 
-export class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<any>, State> {
+class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<any>, State> {
+    
     private get sidePanel() {
         return this.queryParam('sidePanel');
     }
@@ -41,6 +44,7 @@ export class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<an
     }
 
     public render() {
+        const { t } = this.props;
         return (
             <Consumer>
                 {ctx => (
@@ -51,7 +55,7 @@ export class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<an
                             actionMenu: {
                                 items: [
                                     {
-                                        title: 'Create New Cluster Workflow Template',
+                                        title: <p>{t('tips.tip15')}</p>,
                                         iconClassName: 'fa fa-plus',
                                         action: () => (this.sidePanel = 'new')
                                     }
@@ -76,17 +80,18 @@ export class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<an
     }
 
     private renderTemplates() {
+        const { t } = this.props;
         if (this.state.error) {
             return <ErrorNotice error={this.state.error} />;
         }
         if (!this.state.templates) {
             return <Loading />;
         }
-        const learnMore = <a href='https://argoproj.github.io/argo-workflows/cluster-workflow-templates/'>Learn more</a>;
+        const learnMore = '';
         if (this.state.templates.length === 0) {
             return (
-                <ZeroState title='No cluster workflow templates'>
-                    <p>You can create new templates here or using the CLI.</p>
+                <ZeroState title={t('tips.tip14')}>
+                    <p>{t('tips.tip10')}</p>
                     <p>
                         <ExampleManifests />. {learnMore}.
                     </p>
@@ -94,6 +99,7 @@ export class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<an
             );
         }
         return (
+            
             <>
                 <div className='argo-table-list'>
                     <div className='row argo-table-list__head'>
@@ -114,10 +120,11 @@ export class ClusterWorkflowTemplateList extends BasePage<RouteComponentProps<an
                     ))}
                 </div>
                 <Footnote>
-                    <InfoIcon /> Cluster scoped Workflow templates are reusable templates you can create new workflows from. <ExampleManifests />. {learnMore}.
+                    <InfoIcon /> {t('tips.tip13')}. <ExampleManifests />. {learnMore}.
                 </Footnote>
             </>
         );
     }
 }
 
+export default withTranslation()(ClusterWorkflowTemplateList);

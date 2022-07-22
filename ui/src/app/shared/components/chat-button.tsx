@@ -10,7 +10,8 @@ export const ChatButton = () => {
         services.info
             .getInfo()
             .then(info => info.links)
-            .then(links => (links || []).concat({name: 'Get help', scope: 'chat', url: 'https://argoproj.github.io/argo-workflows/'}).filter(x => x.scope === 'chat'))
+            // .then(links => (links || []).concat({name: 'Get help', scope: 'chat', url: 'https://argoproj.github.io/argo-workflows/'}).filter(x => x.scope === 'chat'))
+            .then(links => (links || []).concat({name: '更多帮助', scope: 'chat', url: 'https://github.com/Intelligent-Computing-Lab/argoflow/blob/master/argoflow%E6%93%8D%E4%BD%9C%E6%89%8B%E5%86%8C.docx'}).filter(x => x.scope === 'chat'))
             .then(links => {
                 setLink(links[0]);
             });

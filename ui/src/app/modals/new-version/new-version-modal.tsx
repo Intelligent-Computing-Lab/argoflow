@@ -6,6 +6,7 @@ require('./new-version-modal.scss');
 /**
  * The intention of this modal is to encourage update of new features.
  */
+// 姜猛修改标记，version线索
 export const NewVersionModal = ({version, dismiss}: {version: string; dismiss: () => void}) => {
     return (
         <Modal dismiss={dismiss}>

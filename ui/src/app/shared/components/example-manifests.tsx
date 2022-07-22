@@ -4,8 +4,7 @@ function ExampleManifests ()  {
     const { t, i18n } = useTranslation();
     return(    
     <>
-        {t('tips.tip6')} <a href='https://github.com/argoproj/argo-workflows/tree/master/examples'>{t('tips.tip2')}</a> {t('tips.tip3')}{' '}
-        <a href='https://argoproj-labs.github.io/argo-workflows-catalog/'>{t('tips.tip4')}</a>{t('tips.tip5')}
+        {t('tips.tip6')}{t('submit.s2')}{t('submit.s3')}{t('submit.s4')}{t('tips.tip8')}
     </>
     )
 };
